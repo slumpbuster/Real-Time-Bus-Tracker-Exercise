@@ -4,7 +4,7 @@ let markers = [];
 let vehicleInfo = [];
 
 // TODO: add your own access token
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGpzZWxsZXJzIiwiYSI6ImNreXlmZjFvbTBxMnoycHRidWxoc28xeWMifQ.7AgPjB0-Oi6kQ5M92q6LXA';
+mapboxgl.accessToken = '';
 
 // This is the map instance
 let map = new mapboxgl.Map({
