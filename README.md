@@ -5,6 +5,8 @@
 This shows the location of public vehicles in transit that are associated with the Massachusetts Bay Transportation Authority (MBTA).
 Originally, this showed the progrewssion of stops from MIT to Harvard. Now it will show all vehicles in transit throught the Bay area with information about each vehicle.
 
+
+
 ---------
 
 ## How to Run 
@@ -15,10 +17,25 @@ Originally, this showed the progrewssion of stops from MIT to Harvard. Now it wi
 
 ---------
 
+## Generate a Mapbox API key
+1. Create a [Mapbox account](https://account.mapbox.com/auth/signup/?route-to=%22/%22)
+2. Go to [account page](https://account.mapbox.com/) and log in
+3. Scroll down till you see **Access tokens**
+4. Copy the **Default public token**
+5. Replace the **YOUR TOKEN HERE** in the section of code mapboxgl.accessToken = 'YOUR TOKEN HERE'; in the mapanimation.js file
+
+---------
+
+## Improvements Made
+- 2022-02-03: Use different color marker for vehicles based on their occupancy: RED: No Occupancy / ORANGE: Close to Full / YELLOW: Few Seats / GREEN: Many Seats
+- 2022-02-03: Changed Map view to Street View for more detail
+
+---------
+
 ## Roadmap of future improvements
 - Add the ability to enable/disable refresh as well as setting the interval
 - Add the ability to filter out vehicles by their vehicle numbers
-- Use different marker for vehicles based on their occupancy: Red = Full / Yellow = Few Seats Avaiable / Green = Many Seats Available
+
 ---------
 
 ## Files 
