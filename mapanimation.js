@@ -1,15 +1,14 @@
 //declare variables
 let vehicles = [];
 let markers = [];
-let vehicleInfo = [];
 
 // TODO: add your own access token
-mapboxgl.accessToken = '';
+mapboxgl.accessToken = 'YOUR TOKEN HERE';
 
 // This is the map instance
 let map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v11',
+  style: 'mapbox://styles/mapbox/satellite-streets-v11',
   center: [-71.054081, 42.369554],
   zoom: 10.5,
 });
@@ -21,12 +20,6 @@ function clearVehicleMarkers() {
     marker.remove();    
   })
   markers = [];
-
-  // clear the popups
-  vehicleInfo.forEach((info) => {
-    info.remove();    
-  })
-  vehicleInfo = [];
 }
 
 //Updates 
@@ -49,17 +42,30 @@ function updateVehicleMarkers() {
       hover += `<div><strong>Updated:</strong> <span id='updated_at'>${vehicle.attributes.updated_at.replaceAll('T', ' ')}</span></div>
         </div>`
 
-      // create popup to be added to the marker
-      vehicleInfo[counter] = new mapboxgl.Popup({
-        anchor: "top",
-        closeOnClick: true,
-      })
-      .setHTML(hover)
-
+      // find occupancy to set color
+      let markerColor = 'red';
+      switch(vehicle.attributes.occupancy_status) {
+        case 'EMPTY', 'MANY_SEATS_AVAILABLE':
+          markerColor = 'green'
+          break;
+        case 'FEW_SEATS_AVAILABLE':
+          markerColor = 'yellow'
+          break;
+        case 'STANDING_ROOM_ONLY', 'CRUSHED_STANDING_ROOM_ONLY', 'FULL':
+          markerColor = 'orange'
+          break;
+      }
+      
       // add marker to the map at the vehicleStops
-      markers[counter] = new mapboxgl.Marker()
+      markers[counter] = new mapboxgl.Marker({ color: markerColor })
         .setLngLat([vehicle.attributes.longitude, vehicle.attributes.latitude])
-        .setPopup(vehicleInfo[counter])
+        .setPopup(
+          new mapboxgl.Popup({
+            anchor: "top",
+            closeOnClick: true,
+          })
+          .setHTML(hover)
+        )
         .addTo(map);
       counter++;
     }
