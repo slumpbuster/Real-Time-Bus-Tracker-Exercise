@@ -42,10 +42,10 @@ Originally, this showed the progrewssion of stops from MIT to Harvard. Now it wi
 ---------
 
 ## Files 
-- **/publicTransportation.jpg** - Used in the Readme file 
-- **/index.html** - Start-up file to be opened by browse 
-- **/styles.css** - Stylesheet file that positions objects, controls text, colors, and layout
-- **/mapanimation.js** - Javascript file manipulating what is occuring in the browser 
+- **/images/publicTransportation.jpg** - Used in the Readme file 
+- **index.html** - Start-up file to be opened by browse 
+- **styles.css** - Stylesheet file that positions objects, controls text, colors, and layout
+- **mapanimation.js** - Javascript file manipulating what is occuring in the browser 
 
 ---------
 
