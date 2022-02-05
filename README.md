@@ -28,6 +28,10 @@ Originally, this showed the progrewssion of stops from MIT to Harvard. Now it wi
 ## Improvements Made
 - 2022-02-03: Use different color marker for vehicles based on their occupancy: RED: No Occupancy / ORANGE: Close to Full / YELLOW: Few Seats / GREEN: Many Seats
 - 2022-02-03: Changed Map view to Street View for more detail
+- 2022-02-05: Added Legend for Marker Colors
+- 2022-02-05: Added Purple Color Marker for Unknown / Unprovided Occupancy Status
+- 2022-02-05: Removed Occupancy Status from Popup as no longer needed
+- 2022-02-05: Added opacity
 
 ---------
 
