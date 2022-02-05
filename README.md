@@ -5,11 +5,10 @@
 This shows the location of public vehicles in transit that are associated with the Massachusetts Bay Transportation Authority (MBTA).
 Originally, this showed the progrewssion of stops from MIT to Harvard. Now it will show all vehicles in transit throught the Bay area with information about each vehicle.
 
-
-
 ---------
 
 ## How to Run 
+- Open the .html file in a browser (Chrome, Edge, Safari, Firefox)
 - When the browser is loaded, all current vehicles associated with the MBA that are in transit will be displayed
 - Initially, to show all vehicles, the map is zoomed out. To zoom, one can either use their scroll mouse, double click on the map, but not a marker, or if using a touch enabed device, use their fingers.
 - The live data of the vehicles is updated every 15 seconds, but not populated to the map. This was left as a manual process. To refresh the location of the vehicles on the map, simply click on the button that states "Update location of public vehicles currently in transit".
