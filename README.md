@@ -1,5 +1,5 @@
 # Real Time Bus Tracker
-# <img src="publicTransportation.jpg" height="150px" width="300px"/>
+# <img src="./images/publicTransportation.jpg" height="150px" width="300px"/>
 
 ## Description 
 This shows the location of public vehicles in transit that are associated with the Massachusetts Bay Transportation Authority (MBTA).
