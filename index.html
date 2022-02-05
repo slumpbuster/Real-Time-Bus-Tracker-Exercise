@@ -12,8 +12,17 @@
 
 <body onload="loadVehicleInfo()">
     <div id="map"></div>
-    <div class="map-overlay top">
+    <div class="map-overlay">
         <button style="font-size: 2em" onclick="updateVehicleMarkers()">Update location of public vehicles currently in transit</button>
+    </div>
+    <div class="legend">
+      <div><strong>Marker Color Legend - Seat Availability</strong></div>
+      <br>
+      <div><strong style="color: purple;">PURPLE: </strong><span class="occupancy">Unknown Occupancy</span></div>
+      <div><strong style="color: red;">RED: </strong><span class="occupancy">No Occupancy</span></div>
+      <div><strong style="color: orange;">ORANGE: </strong><span class="occupancy">Close to Full</span></div>
+      <div><strong style="color: yellow;">YELLOW: </strong><span class="occupancy">Few Seats Available</span></div>
+      <div><strong style="color: green;">GREEN: </strong><span class="occupancy">Many Seats Available</span></div>
     </div>
     <script src="./mapanimation.js"></script>
 </body>

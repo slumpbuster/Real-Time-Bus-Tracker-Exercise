@@ -37,8 +37,9 @@ function updateVehicleMarkers() {
       if (vehicle.attributes.current_status != null)
         hover += `<div><strong>Status:</strong> <span id='current_status'>${vehicle.attributes.current_status.replaceAll('_TO', '').replaceAll('_', ' ')}</span></div>`
       hover += `<div><strong>Current Stop:</strong> <span id='current_stop_sequence'>${vehicle.attributes.current_stop_sequence}</span></div>`
-      if (vehicle.attributes.occupancy_status != null)
-        hover += `<div><strong>Occupancy:</strong> <span id='occupancy_status'>${vehicle.attributes.occupancy_status.replaceAll('_', ' ')}</span></div>`
+      // removed since doing color markers
+      //if (vehicle.attributes.occupancy_status != null)
+      //  hover += `<div><strong>Occupancy:</strong> <span id='occupancy_status'>${vehicle.attributes.occupancy_status.replaceAll('_', ' ')}</span></div>`
       hover += `<div><strong>Updated:</strong> <span id='updated_at'>${vehicle.attributes.updated_at.replaceAll('T', ' ')}</span></div>
         </div>`
 
@@ -46,13 +47,17 @@ function updateVehicleMarkers() {
       let markerColor = 'red';
       switch(vehicle.attributes.occupancy_status) {
         case 'EMPTY', 'MANY_SEATS_AVAILABLE':
-          markerColor = 'green'
+          markerColor = 'green';
           break;
         case 'FEW_SEATS_AVAILABLE':
-          markerColor = 'yellow'
+          markerColor = 'yellow';
           break;
         case 'STANDING_ROOM_ONLY', 'CRUSHED_STANDING_ROOM_ONLY', 'FULL':
-          markerColor = 'orange'
+          markerColor = 'orange';
+          break;
+        case null:
+          // added for missing occupancy
+          markerColor = 'purple';
           break;
       }
       
