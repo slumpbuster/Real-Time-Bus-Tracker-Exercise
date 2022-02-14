@@ -5,8 +5,6 @@
 This shows the location of public vehicles in transit that are associated with the Massachusetts Bay Transportation Authority (MBTA).
 Originally, this showed the progrewssion of stops from MIT to Harvard. Now it will show all vehicles in transit throught the Bay area with information about each vehicle.
 
----------
-
 ## Purpose 
 This was done as an assignment in the MIT course - Full Stack Development with Mern
 
@@ -22,8 +20,6 @@ This was done as an assignment in the MIT course - Full Stack Development with M
 ## Installation 
 - Clone this repository to your local machine
 
----------
-
 ## How to Run 
 - Browse to the directory where you cloned this repository
 - Open the .html file in a browser (Chrome, Edge, Safari, Firefox)
@@ -31,8 +27,6 @@ This was done as an assignment in the MIT course - Full Stack Development with M
 - Initially, to show all vehicles, the map is zoomed out. To zoom, one can either use their scroll mouse, double click on the map, but not a marker, or if using a touch enabed device, use their fingers.
 - The live data of the vehicles is updated every 15 seconds, but not populated to the map. This was left as a manual process. To refresh the location of the vehicles on the map, simply click on the button that states "Update location of public vehicles currently in transit".
 - If you would like to gather more information on a particular vehicle, simply click on it's marker. It will provide you with the vehicle number, it's status, where it is in it's list of stops, it's availalbe occupancy, and the last time the data was updated.
-
----------
 
 ## Generate a Mapbox API key
 1. Create a [Mapbox account](https://account.mapbox.com/auth/signup/?route-to=%22/%22)
@@ -51,8 +45,6 @@ This was done as an assignment in the MIT course - Full Stack Development with M
 - 2022-02-05: Removed Occupancy Status from Popup as no longer needed
 - 2022-02-05: Added opacity
 
----------
-
 ## Roadmap of Future Improvements
 - Add the ability to enable/disable refresh as well as setting the interval
 - Add the ability to filter out vehicles by their vehicle numbers
@@ -69,8 +61,6 @@ This was done as an assignment in the MIT course - Full Stack Development with M
 
 ## Contributing 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
----------
 
 ## License
 [The MIT License (MIT)](https://github.com/slumpbuster/Real-Time-Bus-Tracker-Exercise/blob/main/LICENSE)
