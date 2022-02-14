@@ -67,4 +67,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---------
 
-## Return to [Slumpbuster Portfolio](https://slumpbuster.github.io/)
+## Return to [Slumpbuster Portfolio](https://slumpbuster.github.io/#portfolio)
