@@ -53,7 +53,7 @@ This was done as an assignment in the MIT course - Full Stack Development with M
 
 ## Files 
 - **/images/publicTransportation.png** - Used in the Readme file 
-- **index.html** - Start-up file to be opened by browse 
+- **index.html** - Start-up file to be opened by browser
 - **styles.css** - Stylesheet file that positions objects, controls text, colors, and layout
 - **mapanimation.js** - Javascript file manipulating what is occuring in the browser 
 
